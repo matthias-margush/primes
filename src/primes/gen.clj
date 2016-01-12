@@ -61,16 +61,14 @@
 
 (defn print-table
   "Prints a multiplication table of primes."
-  []
+  [x-seq y-seq]
   (let [f *
         v-div " |"
         h-div "-"
 
-        primes (take 10 (primes))
-
         ; label data
-        row-headers primes
-        col-headers primes
+        row-headers y-seq
+        col-headers x-seq
 
         ; table data
         rows (products f row-headers col-headers)
