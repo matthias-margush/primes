@@ -4,8 +4,9 @@
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Prints a table of the products of the first 10 prime numbers."
   [& args]
 
+  ; TODO: parse command line
   (let [ps (take 10 (primes))]
     (println (tabulate ps ps (products * ps ps)))) )

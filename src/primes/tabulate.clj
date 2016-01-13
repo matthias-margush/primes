@@ -40,7 +40,7 @@
         h-div "-"
 
         ; table data
-        rows table-data ;(products f row-headers col-headers)
+        rows table-data
         cols (transpose rows)
 
         ; label data
