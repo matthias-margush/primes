@@ -29,6 +29,7 @@
              "19 | 38 57  95 133 209 247 323 361 437 551\n"
              "23 | 46 69 115 161 253 299 391 437 529 667\n"
              "29 | 58 87 145 203 319 377 493 551 667 841")]
+
     (testing "tabulation"
       (let [ps (take 10 (primes))
             actual-render (tabulate ps ps (products * ps ps))]

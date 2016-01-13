@@ -28,13 +28,13 @@
 
 
 (defn spacer
-  "Creates a spacer by repeating ch of the given width."
+  "Creates a spacer of the given width by repeating s."
   [width s]
   (join "" (take width (repeat s))))
 
 
 (defn tabulate
-  "Renders a table of values"
+  "Renders a table of values."
   [xs ys table-data]
   (let [v-div " |"
         h-div "-"
