@@ -5,7 +5,7 @@
 (defn prime?
   "Checks whether a number is prime."
   [p?]
-  (if (= p? 1) false
+  (if (< p? 2) false
     (let [end (sqrt p?)]
       (loop [n 2]
         (cond

@@ -21,7 +21,7 @@
 
 
 (defn fmt
-  "Prepends val with enough spaces so it fits in width, and appends vals."
+  "Prepends str of val with enough spaces so its count is width, then appends vals."
   [width val & vals]
   (let [fmt-str (str "%" width "s")]
     (apply str (format fmt-str val) vals)))
