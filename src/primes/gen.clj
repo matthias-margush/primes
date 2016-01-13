@@ -1,5 +1,5 @@
 (ns primes.gen
-    (:require [clojure.math.numeric-tower :refer [sqrt]]))
+  (:require [clojure.math.numeric-tower :refer [sqrt]]))
 
 
 (defn prime?

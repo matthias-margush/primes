@@ -34,18 +34,18 @@
 
 
 (defn tabulate
-  "Renders a table of values resulting from applying f to each item in x-seq and y-seq"
-  [f x-seq y-seq]
+  "Renders a table of values"
+  [table-data]
   (let [v-div " |"
         h-div "-"
 
-        ; label data
-        row-headers y-seq
-        col-headers x-seq
-
         ; table data
-        rows (products f row-headers col-headers)
+        rows table-data ;(products f row-headers col-headers)
         cols (transpose rows)
+
+        ; label data
+        row-headers (first cols)
+        col-headers (first rows)
 
         ; layout widths
         col-widths (map max-width cols)
@@ -62,7 +62,6 @@
         divider-str (spacer (count header-str) "-")
         rows-strs (map #(str %1 " " (join " " %2)) row-lbls row-vals)]
     
-    ; header, divider, each row
-    rows
-    #_(join "\n" [header-str divider-str (join "\n" rows-strs)])))
+    ; header, divider, then each row
+    (join "\n" [header-str divider-str (join "\n" rows-strs)])))
 
