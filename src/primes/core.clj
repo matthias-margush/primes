@@ -9,4 +9,4 @@
 
   ; TODO: parse command line
   (let [ps (take 10 (primes))]
-    (println (tabulate ps ps (products * ps ps)))) )
+    (println (tabulate ps ps (products * ps ps)))))

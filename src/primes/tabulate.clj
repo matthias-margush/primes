@@ -1,5 +1,5 @@
 (ns primes.tabulate
-    (:require [clojure.string :refer [join]]))
+  (:require [clojure.string :refer [join]]))
 
 
 (defn products
