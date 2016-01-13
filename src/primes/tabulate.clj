@@ -35,7 +35,7 @@
 
 (defn tabulate
   "Renders a table of values"
-  [table-data]
+  [xs ys table-data]
   (let [v-div " |"
         h-div "-"
 
@@ -44,8 +44,8 @@
         cols (transpose rows)
 
         ; label data
-        row-headers (first cols)
-        col-headers (first rows)
+        row-headers ys
+        col-headers xs
 
         ; layout widths
         col-widths (map max-width cols)

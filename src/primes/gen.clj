@@ -5,12 +5,13 @@
 (defn prime?
   "Checks whether a number is prime."
   [p?]
-  (let [end (sqrt p?)]
-    (loop [n 2]
-      (cond
-        (> n end) true
-        (= 0 (rem p? n)) false
-        :else (recur (inc n))))))
+  (if (= p? 1) false
+    (let [end (sqrt p?)]
+      (loop [n 2]
+        (cond
+          (> n end) true
+          (= 0 (rem p? n)) false
+          :else (recur (inc n)))))))
 
 
 (defn next-prime
@@ -23,6 +24,6 @@
 
 (defn primes
   "Returns a lazy seq of primes."
-  ([] (primes 1))
+  ([] (primes 2))
   ([p] (lazy-seq (cons p (primes (next-prime p))))))
 

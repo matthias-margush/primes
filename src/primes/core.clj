@@ -8,4 +8,4 @@
   [& args]
 
   (let [ps (take 10 (primes))]
-    (println (tabulate (products * ps ps)))) )
+    (println (tabulate ps ps (products * ps ps)))) )
